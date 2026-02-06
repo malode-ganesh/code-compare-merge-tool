@@ -176,29 +176,35 @@ const styles = {
   page: {
     minHeight: "100vh",
     background: "linear-gradient(135deg,#0f2027,#203a43,#2c5364)",
-    padding: 30,
+    padding: 20,
     color: "white",
     fontFamily: "Segoe UI, sans-serif",
   },
+
   title: {
     textAlign: "center",
-    fontSize: 32,
+    fontSize: "clamp(22px, 4vw, 32px)",
     marginBottom: 5,
   },
+
   subtitle: {
     textAlign: "center",
     color: "#ddd",
     marginBottom: 25,
+    fontSize: "clamp(14px, 3vw, 16px)",
   },
+
   uploadRow: {
     display: "flex",
     gap: 20,
     justifyContent: "center",
     marginBottom: 20,
+    flexWrap: "wrap",       // ⭐ important
   },
+
   dropBox: {
-    width: 250,
-    height: 120,
+    width: "min(100%, 260px)",   // ⭐ responsive width
+    height: 130,
     border: "2px dashed #aaa",
     borderRadius: 12,
     display: "flex",
@@ -207,12 +213,15 @@ const styles = {
     justifyContent: "center",
     background: "rgba(255,255,255,0.05)",
   },
+
   actions: {
     display: "flex",
     justifyContent: "center",
-    gap: 15,
+    gap: 10,
     marginBottom: 15,
+    flexWrap: "wrap",       // ⭐ wrap buttons on small screen
   },
+
   editorWrapper: {
     borderRadius: 10,
     overflow: "hidden",
@@ -220,9 +229,3 @@ const styles = {
   },
 };
 
-/*
-RUN STEPS
----------
-1. npm install
-2. npm run dev
-*/
