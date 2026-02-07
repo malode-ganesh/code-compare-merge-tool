@@ -18,6 +18,7 @@ const languageMap = {
   yaml: "yaml",
   md: "markdown",
   sql: "sql",
+  php: "php"
 };
 
 export default function App() {
